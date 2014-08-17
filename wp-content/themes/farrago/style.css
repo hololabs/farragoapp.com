@@ -195,6 +195,14 @@ body {
 	clear: both;
 }
 
+/* remove mail form */
+
+#mc_embed_signup
+{
+  visibility: hidden;
+}
+
+
 /* =Header
 -------------------------------------------------------------- */
 
