@@ -1,0 +1,754 @@
+/*
+Theme Name: Farrago
+Author: Neale McDavitt-Van Fleet
+Author URI: http://fivewhysdesign.com/
+Description: Custom theme developed for Farrago
+Version: 0.1
+*/
+
+/* = Reset
+-------------------------------------------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	/* vertical-align: baseline; */
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* =Typography
+-------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'nevisBold';
+    src: url('fonts/nevis-webfont.eot');
+    src: url('fonts/nevis-webfont.eot?') format('embedded-opentype'),
+         url('fonts/nevis-webfont.woff') format('woff'),
+         url('fonts/nevis-webfont.ttf') format('truetype'),
+         url('fonts/nevis-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: nevisBold, Arial, Helvetica, Sans-Serif;
+	color: #fff;
+}
+
+h1 {
+	font-size: 30px;
+	margin: 15px 0 15px;
+}
+
+h1 a {
+	color: #fff;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 30px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px dashed #000;
+	margin: 10px 0 10px 0;
+}
+
+h3 {
+	font-size: 20px;
+	margin: 10px 0 15px 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px dashed #000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px dashed #fff;
+}
+
+p {
+	margin: 0 0 22px 0;
+}
+
+
+/* =Structure
+-------------------------------------------------------------- */
+
+body {
+	background: #df5800;
+	color: #000;
+	font-family: Arial, Helvetica, Sans-Serif;
+	padding: 0;
+	margin: 0;
+	font-size: 17px;
+	line-height: 22px;
+}
+
+#page {
+	display: block;
+	
+	
+}
+#primary {
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+	clear: both;
+}
+#content {
+}
+#main .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 220px;
+}
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+.post {
+	margin: 0 0 30px 0;
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.section-heading {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header-container {
+	width: 100%;
+	background: #000 url(images/bg-header.png) repeat-x bottom;
+	color: #fff;
+	position: relative;
+	
+}
+
+#branding {
+	width: 600px;
+	margin: 0 auto;
+	padding: 20px 0 20px 0;
+}
+
+#site-title {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0;
+	/*float: left;*/
+}
+
+#site-title a:hover {
+	border-bottom: none;
+}
+
+#site-description {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 0 0;
+	color: #df5800;
+	/*float: left;*/
+	clear: left;
+	width: 400px;
+}
+/*
+.share {
+	text-align: right;
+	width: 200px;
+	float: right;
+}
+*/
+
+h3.help-link {
+	width: 200px;
+	float: right;
+}
+
+h3.help-link a {
+	color: #fff;
+	float: right;
+	font-family: nevisBold, Arial, Helvetica, Sans-Serif;
+	border-bottom: none;
+	padding: 0 30px 0 0;
+}
+
+h3.help-link a:hover {
+	color: #000;
+	border-bottom: none;
+}
+
+#facebook {
+	position: relative;
+	top: -10px;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	display: block;
+	float: left;
+	margin: 0 auto 1em;
+	width: 100%;
+}
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+#access ul ul {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	background: #dedede;
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+	height: auto;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: #dedede;
+}
+#access ul ul a:hover {
+	background: #cecece;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+.entry-meta {
+	clear: both;
+	display: block;
+	font-size: 12px;
+}
+
+#nav {
+	margin: 0;
+}
+
+#nav a {
+	color: #fff;
+	display: block;
+	float: left;
+	width: 150px;
+	border-bottom: none;
+	text-align: center;
+	padding: 5px 0;
+	margin: 0 0 25px 0;
+	font-family: nevisBold, Arial, Helvetica, Sans-Serif;
+}
+
+#nav a:hover {
+	cursor: pointer;
+	color: #000;
+}
+
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0;
+}
+.page-link {
+	margin: 0 0 1em;
+}
+
+#content .column {
+	width: 280px;
+	margin: 10px;
+	float: left;
+}
+
+#content .column ul {
+	margin: 22px 0 0 0;
+}
+
+#content .column ul li {
+	margin: 0px 0 22px 0px;
+}
+
+.smallText {
+	font-size: 11px;
+}
+
+.white {
+	color: #fff;
+}
+
+#markers {
+	clear: both;
+	background: #fff;
+	color: #000;
+	padding: 40px;
+	margin: 0 0 20px 0;
+}
+
+#markers a.marker-link {
+	color: #000;
+	margin: 30px 0 0 0;
+	border-bottom: none;
+}
+
+#markers .marker-slideshow {
+	height: 450px;
+	width: 450px;
+	overflow: hidden;
+	margin: 35px 35px 75px;
+}
+
+#markers .marker-slideshow img {
+	
+}
+
+#markers .marker-slideshow:hover {
+	cursor: e-resize;
+}
+
+h3.markers-toggle {
+	float: left;
+}
+
+h3.markers-toggle:hover {
+	color: #000;
+	cursor: pointer;
+}
+
+/* 404 page */
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+	background: #eee;
+	display: block;
+	padding: 1em;
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+	float: left;
+}
+.image-attachment nav {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #eee;
+	margin: 0 0 1em;
+	padding: 1em;
+	text-align: center;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+	display: none;
+}
+.single .format-aside .entry-header {
+	display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+	padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+	padding-top: 0;
+}
+
+/* Aside Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin-right: 1em;
+}
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+.gallery-caption {
+	
+}
+.wp-smiley {
+	margin: 0;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	width: 60%;
+}
+input[type=text],
+input#s {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+textarea {
+	width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+article.comment {
+	display: block;
+}
+#respond input[type=text] {
+	display: block;
+	width: 60%;
+}
+#respond textarea {
+	display: block;
+	margin: 0 0 1em;
+	width: 80%;
+}
+#respond .form-allowed-tags {
+	clear: both;
+	width: 80%;
+}
+#respond .form-allowed-tags code {
+	display: block;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	display: block;
+}
+.widget-area .widget_search {
+	overflow: hidden;
+}
+.widget-area .widget_search input {
+	float: left;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#footer-container {
+	background: #000 url(images/bg-footer.png) repeat-x top;
+	width: 100%;
+	padding: 20px 0;
+}
+
+#colophon {
+	width: 600px;
+	min-height: 160px;
+	color: #fff;
+	margin: 0 auto;
+}
+
+#colophon a {
+	color: #999;
+}
+
+#colophon h3.the-team {
+	width: 150px;
+	margin: 0 50px 0 0;
+	float: left;
+	color: #fff;
+}
+
+.the-team, .markers-toggle {
+	padding: 0 30px 0 0;
+	background: url(images/more.png) no-repeat right;
+}
+
+.hider, .markers-toggle.hider {
+	padding: 0 30px 0 0;
+	background: url(images/less.png) no-repeat right;
+}
+
+.the-team:hover {
+	cursor: pointer;
+}
+
+.copyright {
+	float: left;
+	clear: both;
+	color: #666;
+	font-size: 12px;
+	padding: 50px 0 10px 0;
+}
+
+#colophon h1, #colophon h2, #colophon h3, #colophon h4, #colophon h5, #colophon h6 {
+	color: #df5800;
+}
+
+#footer-description {
+	clear: both;
+}
+
+#footer-description h3 {
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+a.app-store {
+	border-bottom: none;
+	margin: 40px 0 0 0;
+	width: 273px;
+	height: 60px;
+	float: left;
+}
+
+/* =Slideshow
+-------------------------------------------------------------- */
+
+.iphone {
+	background: url(images/iphone.png) no-repeat;
+	width: 600px;
+	height: 300px;
+	float: left;
+	overflow: hidden;
+}
+
+.iphone img {
+	margin: 21px 0 0 111px;
+}
+
+.slideshow-nav {
+	margin: 25px auto 0;
+	padding: 0;
+	text-align: center;
+	clear: left;
+}
+
+.slideshow-nav a {
+	width: 18px;
+	height: 18px;
+	padding: 5px 12px 12px;
+	background: url(images/slideshow-nav.png) no-repeat center;
+	display: inline-block;
+	border-bottom: none !important;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+
+.slideshow-nav a:hover {
+	background: url(images/slideshow-nav-hover.png) no-repeat center;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+}
+
+.slideshow-nav a.activeSlide, .slideshow-nav a.activeSlide:hover {
+	background: url(images/slideshow-nav-current.png) no-repeat center;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+
+.next {
+	cursor: e-resize;
+}
+
+
+/* =Misc.
+-------------------------------------------------------------- */
+::-moz-selection {
+       background-color: #fff;
+       color: #000;
+       opacity: 1;
+}
+
+::selection {
+       background-color: #fff;
+       color: #000;
+       opacity: 1;
+}
